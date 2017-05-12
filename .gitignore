@@ -1,0 +1,8 @@
+.git
+.DS_Store
+*/.DS_Store
+*/bin/*.app
+
+// Xcode Interface State
+*/UserInterfaceState.xcuserstate
+*/xcschememanagement.plist
