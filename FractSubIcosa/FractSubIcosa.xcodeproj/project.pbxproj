@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04C13EEA813A786CC1D8137A /* FxaaPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9425843AEC3118B8FDEF1B0B /* FxaaPass.cpp */; };
+		114C00B13F753E59BB0984BB /* DofPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E837DEBFAEA1CAD833A377DF /* DofPass.cpp */; };
+		1E615236D6D182DED6C8A8B2 /* RenderPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54F36382628E4D0FF07206D7 /* RenderPass.cpp */; };
+		28AFD6FA9B9C885AFD9FF1C7 /* HorizontalTiltShifPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */; };
+		33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */; };
+		3A499904889C490DCF533C6E /* BloomPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D41ED8C8083845703AA1FDFA /* BloomPass.cpp */; };
+		4355FD81C3F9DDE40B10CE94 /* SSAOPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C127DCF305861E6D5D6332E6 /* SSAOPass.cpp */; };
+		4A2B684DF41F7779B2947319 /* RimHighlightingPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74BDDD14F49833AD24862E87 /* RimHighlightingPass.cpp */; };
+		6A505EAE8088949A9180FFE7 /* GodRaysPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07AAE715D8853EDA76BC909 /* GodRaysPass.cpp */; };
+		778DCA6792476E5B9F57F175 /* ConvolutionPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD9661AF21261E24A05A4 /* ConvolutionPass.cpp */; };
+		79308B05C4D0A9B9E404FFED /* BleachBypassPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5313A8CC477A5ECC0A7E4E8 /* BleachBypassPass.cpp */; };
+		7AB51F1099DC01486D18FAF6 /* LimbDarkeningPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9222AE2464AE1CF72876A4ED /* LimbDarkeningPass.cpp */; };
+		8072A86E35F7000F7CDEEF42 /* NoiseWarpPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BC56A60E911F7488A58830A /* NoiseWarpPass.cpp */; };
+		813E52BD790CE4AAF527DCD4 /* ToonPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E547AB568F5E5027A880C47C /* ToonPass.cpp */; };
+		884CB4D049E35C51E949A565 /* KaleidoscopePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 108C4DB0C398388D00027091 /* KaleidoscopePass.cpp */; };
+		898CB0955CB42FEB5D750A5C /* VerticalTiltShifPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B73DCDAF417A486A343EF /* VerticalTiltShifPass.cpp */; };
+		AE65C02FEC934514466A8D67 /* EdgePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8B4DE8CD341280FDE798A /* EdgePass.cpp */; };
+		B1747F12881D899DCA2647FC /* LUTPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F171898BD12F77CCAD29B7C1 /* LUTPass.cpp */; };
+		B58A80B21A55E254F48E6E13 /* DofAltPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91F91C3BEAD0B3C2B92BB9A5 /* DofAltPass.cpp */; };
+		B59194C82B8D802DA33EC465 /* HsbShiftPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A1741CC4F784D8B130531 /* HsbShiftPass.cpp */; };
+		B951AAE35209993B4E399E77 /* PixelatePass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7462D018F6D6E407E598A021 /* PixelatePass.cpp */; };
+		BE5ED1FDB18D5092CF3AACA0 /* PostProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 484F662699DFE8176E1B750F /* PostProcessing.cpp */; };
+		D752EB8BA905C25F5E7F2B30 /* ZoomBlurPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF8D27B3DEDC121DE85F5B7B /* ZoomBlurPass.cpp */; };
+		DFB75F1EBE744A456AC999F4 /* ContrastPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6788311DC7D945282047837A /* ContrastPass.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E4797F1786BE22985F7EE55F /* RGBShiftPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5201F6A7A19258B7F1CA2E43 /* RGBShiftPass.cpp */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0217829E621698E1FD8D9876 /* EdgePass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = EdgePass.h; path = ../../../addons/ofxPostProcessing/src/EdgePass.h; sourceTree = SOURCE_ROOT; };
+		044D4B2A1A607F88FEF2B610 /* ConvolutionPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConvolutionPass.h; path = ../../../addons/ofxPostProcessing/src/ConvolutionPass.h; sourceTree = SOURCE_ROOT; };
+		0453A7C309E8AE8F8C1CC6E8 /* DofPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DofPass.h; path = ../../../addons/ofxPostProcessing/src/DofPass.h; sourceTree = SOURCE_ROOT; };
+		0AC8B4DE8CD341280FDE798A /* EdgePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = EdgePass.cpp; path = ../../../addons/ofxPostProcessing/src/EdgePass.cpp; sourceTree = SOURCE_ROOT; };
+		0BC82FF9BACF54030E42E808 /* RGBShiftPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RGBShiftPass.h; path = ../../../addons/ofxPostProcessing/src/RGBShiftPass.h; sourceTree = SOURCE_ROOT; };
+		0D811F3E1817C17351F97CCF /* BleachBypassPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BleachBypassPass.h; path = ../../../addons/ofxPostProcessing/src/BleachBypassPass.h; sourceTree = SOURCE_ROOT; };
+		108C4DB0C398388D00027091 /* KaleidoscopePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = KaleidoscopePass.cpp; path = ../../../addons/ofxPostProcessing/src/KaleidoscopePass.cpp; sourceTree = SOURCE_ROOT; };
+		14F8B4286F653202B881D865 /* ToonPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ToonPass.h; path = ../../../addons/ofxPostProcessing/src/ToonPass.h; sourceTree = SOURCE_ROOT; };
+		2BE782D7AEC00E59BE1F567F /* VerticalTiltShifPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VerticalTiltShifPass.h; path = ../../../addons/ofxPostProcessing/src/VerticalTiltShifPass.h; sourceTree = SOURCE_ROOT; };
+		2C2B73DCDAF417A486A343EF /* VerticalTiltShifPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VerticalTiltShifPass.cpp; path = ../../../addons/ofxPostProcessing/src/VerticalTiltShifPass.cpp; sourceTree = SOURCE_ROOT; };
+		3AACD9661AF21261E24A05A4 /* ConvolutionPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConvolutionPass.cpp; path = ../../../addons/ofxPostProcessing/src/ConvolutionPass.cpp; sourceTree = SOURCE_ROOT; };
+		3C39EA8CB1911093FD56F9ED /* HorizontalTiltShifPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HorizontalTiltShifPass.h; path = ../../../addons/ofxPostProcessing/src/HorizontalTiltShifPass.h; sourceTree = SOURCE_ROOT; };
+		3F8A1741CC4F784D8B130531 /* HsbShiftPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HsbShiftPass.cpp; path = ../../../addons/ofxPostProcessing/src/HsbShiftPass.cpp; sourceTree = SOURCE_ROOT; };
+		484F662699DFE8176E1B750F /* PostProcessing.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostProcessing.cpp; path = ../../../addons/ofxPostProcessing/src/PostProcessing.cpp; sourceTree = SOURCE_ROOT; };
+		48E4AC9F455A87F0448C70B2 /* ofxPostProcessing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPostProcessing.h; path = ../../../addons/ofxPostProcessing/src/ofxPostProcessing.h; sourceTree = SOURCE_ROOT; };
+		49CAE27DC1D138037CF88ACF /* FxaaPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FxaaPass.h; path = ../../../addons/ofxPostProcessing/src/FxaaPass.h; sourceTree = SOURCE_ROOT; };
+		50800DAB6C4B18E4F92166FC /* KaleidoscopePass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KaleidoscopePass.h; path = ../../../addons/ofxPostProcessing/src/KaleidoscopePass.h; sourceTree = SOURCE_ROOT; };
+		5201F6A7A19258B7F1CA2E43 /* RGBShiftPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RGBShiftPass.cpp; path = ../../../addons/ofxPostProcessing/src/RGBShiftPass.cpp; sourceTree = SOURCE_ROOT; };
+		54F36382628E4D0FF07206D7 /* RenderPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RenderPass.cpp; path = ../../../addons/ofxPostProcessing/src/RenderPass.cpp; sourceTree = SOURCE_ROOT; };
+		5AFAC3311EC77297000AFCC9 /* FractSubIcosa.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FractSubIcosa.hpp; sourceTree = "<group>"; };
+		5BC56A60E911F7488A58830A /* NoiseWarpPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NoiseWarpPass.cpp; path = ../../../addons/ofxPostProcessing/src/NoiseWarpPass.cpp; sourceTree = SOURCE_ROOT; };
+		6788311DC7D945282047837A /* ContrastPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ContrastPass.cpp; path = ../../../addons/ofxPostProcessing/src/ContrastPass.cpp; sourceTree = SOURCE_ROOT; };
+		6AF187A99EECFB13E3BCCD33 /* LimbDarkeningPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LimbDarkeningPass.h; path = ../../../addons/ofxPostProcessing/src/LimbDarkeningPass.h; sourceTree = SOURCE_ROOT; };
+		6BBE5C9251660EA96B398017 /* SSAOPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SSAOPass.h; path = ../../../addons/ofxPostProcessing/src/SSAOPass.h; sourceTree = SOURCE_ROOT; };
+		7462D018F6D6E407E598A021 /* PixelatePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PixelatePass.cpp; path = ../../../addons/ofxPostProcessing/src/PixelatePass.cpp; sourceTree = SOURCE_ROOT; };
+		74BDDD14F49833AD24862E87 /* RimHighlightingPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RimHighlightingPass.cpp; path = ../../../addons/ofxPostProcessing/src/RimHighlightingPass.cpp; sourceTree = SOURCE_ROOT; };
+		91F91C3BEAD0B3C2B92BB9A5 /* DofAltPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DofAltPass.cpp; path = ../../../addons/ofxPostProcessing/src/DofAltPass.cpp; sourceTree = SOURCE_ROOT; };
+		9222AE2464AE1CF72876A4ED /* LimbDarkeningPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LimbDarkeningPass.cpp; path = ../../../addons/ofxPostProcessing/src/LimbDarkeningPass.cpp; sourceTree = SOURCE_ROOT; };
+		9425843AEC3118B8FDEF1B0B /* FxaaPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FxaaPass.cpp; path = ../../../addons/ofxPostProcessing/src/FxaaPass.cpp; sourceTree = SOURCE_ROOT; };
+		9AACF31BAE533E8F81AD4043 /* LUTPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LUTPass.h; path = ../../../addons/ofxPostProcessing/src/LUTPass.h; sourceTree = SOURCE_ROOT; };
+		B2F3289AB405C5BB496FC247 /* PixelatePass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PixelatePass.h; path = ../../../addons/ofxPostProcessing/src/PixelatePass.h; sourceTree = SOURCE_ROOT; };
+		B5CEF0B83529626C7E8410B7 /* BloomPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BloomPass.h; path = ../../../addons/ofxPostProcessing/src/BloomPass.h; sourceTree = SOURCE_ROOT; };
+		BAA4E229C246D7B615917505 /* ZoomBlurPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ZoomBlurPass.h; path = ../../../addons/ofxPostProcessing/src/ZoomBlurPass.h; sourceTree = SOURCE_ROOT; };
+		C07AAE715D8853EDA76BC909 /* GodRaysPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = GodRaysPass.cpp; path = ../../../addons/ofxPostProcessing/src/GodRaysPass.cpp; sourceTree = SOURCE_ROOT; };
+		C127DCF305861E6D5D6332E6 /* SSAOPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SSAOPass.cpp; path = ../../../addons/ofxPostProcessing/src/SSAOPass.cpp; sourceTree = SOURCE_ROOT; };
+		C5313A8CC477A5ECC0A7E4E8 /* BleachBypassPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BleachBypassPass.cpp; path = ../../../addons/ofxPostProcessing/src/BleachBypassPass.cpp; sourceTree = SOURCE_ROOT; };
+		C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FakeSSSPass.cpp; path = ../../../addons/ofxPostProcessing/src/FakeSSSPass.cpp; sourceTree = SOURCE_ROOT; };
+		C69CBE4E4FA9530657A6CD23 /* FakeSSSPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FakeSSSPass.h; path = ../../../addons/ofxPostProcessing/src/FakeSSSPass.h; sourceTree = SOURCE_ROOT; };
+		CC725CAE0A003458E5573DF9 /* GodRaysPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GodRaysPass.h; path = ../../../addons/ofxPostProcessing/src/GodRaysPass.h; sourceTree = SOURCE_ROOT; };
+		D41ED8C8083845703AA1FDFA /* BloomPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BloomPass.cpp; path = ../../../addons/ofxPostProcessing/src/BloomPass.cpp; sourceTree = SOURCE_ROOT; };
+		DACACDF2F37260A0BFF826E2 /* PostProcessing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostProcessing.h; path = ../../../addons/ofxPostProcessing/src/PostProcessing.h; sourceTree = SOURCE_ROOT; };
+		DEF2C306ED271A94AC33B144 /* HsbShiftPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HsbShiftPass.h; path = ../../../addons/ofxPostProcessing/src/HsbShiftPass.h; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* FractSubIcosaDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FractSubIcosaDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E547AB568F5E5027A880C47C /* ToonPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ToonPass.cpp; path = ../../../addons/ofxPostProcessing/src/ToonPass.cpp; sourceTree = SOURCE_ROOT; };
+		E837DEBFAEA1CAD833A377DF /* DofPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DofPass.cpp; path = ../../../addons/ofxPostProcessing/src/DofPass.cpp; sourceTree = SOURCE_ROOT; };
+		E84ADD8443D82E35430385B7 /* RimHighlightingPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RimHighlightingPass.h; path = ../../../addons/ofxPostProcessing/src/RimHighlightingPass.h; sourceTree = SOURCE_ROOT; };
+		EA2A13781712672758AFD432 /* DofAltPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DofAltPass.h; path = ../../../addons/ofxPostProcessing/src/DofAltPass.h; sourceTree = SOURCE_ROOT; };
+		EF8D27B3DEDC121DE85F5B7B /* ZoomBlurPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ZoomBlurPass.cpp; path = ../../../addons/ofxPostProcessing/src/ZoomBlurPass.cpp; sourceTree = SOURCE_ROOT; };
+		F171898BD12F77CCAD29B7C1 /* LUTPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LUTPass.cpp; path = ../../../addons/ofxPostProcessing/src/LUTPass.cpp; sourceTree = SOURCE_ROOT; };
+		F5DB1AC24B8010FC3C556AAC /* RenderPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RenderPass.h; path = ../../../addons/ofxPostProcessing/src/RenderPass.h; sourceTree = SOURCE_ROOT; };
+		F98D3119B492CAFA65819DDA /* ContrastPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ContrastPass.h; path = ../../../addons/ofxPostProcessing/src/ContrastPass.h; sourceTree = SOURCE_ROOT; };
+		F9E69702DE151AD76690D1CF /* NoiseWarpPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NoiseWarpPass.h; path = ../../../addons/ofxPostProcessing/src/NoiseWarpPass.h; sourceTree = SOURCE_ROOT; };
+		FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HorizontalTiltShifPass.cpp; path = ../../../addons/ofxPostProcessing/src/HorizontalTiltShifPass.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
+		AFF78A8EB1A778F89BAD1809 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C5313A8CC477A5ECC0A7E4E8 /* BleachBypassPass.cpp */,
+				0D811F3E1817C17351F97CCF /* BleachBypassPass.h */,
+				D41ED8C8083845703AA1FDFA /* BloomPass.cpp */,
+				B5CEF0B83529626C7E8410B7 /* BloomPass.h */,
+				6788311DC7D945282047837A /* ContrastPass.cpp */,
+				F98D3119B492CAFA65819DDA /* ContrastPass.h */,
+				3AACD9661AF21261E24A05A4 /* ConvolutionPass.cpp */,
+				044D4B2A1A607F88FEF2B610 /* ConvolutionPass.h */,
+				91F91C3BEAD0B3C2B92BB9A5 /* DofAltPass.cpp */,
+				EA2A13781712672758AFD432 /* DofAltPass.h */,
+				E837DEBFAEA1CAD833A377DF /* DofPass.cpp */,
+				0453A7C309E8AE8F8C1CC6E8 /* DofPass.h */,
+				0AC8B4DE8CD341280FDE798A /* EdgePass.cpp */,
+				0217829E621698E1FD8D9876 /* EdgePass.h */,
+				C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */,
+				C69CBE4E4FA9530657A6CD23 /* FakeSSSPass.h */,
+				9425843AEC3118B8FDEF1B0B /* FxaaPass.cpp */,
+				49CAE27DC1D138037CF88ACF /* FxaaPass.h */,
+				C07AAE715D8853EDA76BC909 /* GodRaysPass.cpp */,
+				CC725CAE0A003458E5573DF9 /* GodRaysPass.h */,
+				FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */,
+				3C39EA8CB1911093FD56F9ED /* HorizontalTiltShifPass.h */,
+				3F8A1741CC4F784D8B130531 /* HsbShiftPass.cpp */,
+				DEF2C306ED271A94AC33B144 /* HsbShiftPass.h */,
+				108C4DB0C398388D00027091 /* KaleidoscopePass.cpp */,
+				50800DAB6C4B18E4F92166FC /* KaleidoscopePass.h */,
+				9222AE2464AE1CF72876A4ED /* LimbDarkeningPass.cpp */,
+				6AF187A99EECFB13E3BCCD33 /* LimbDarkeningPass.h */,
+				F171898BD12F77CCAD29B7C1 /* LUTPass.cpp */,
+				9AACF31BAE533E8F81AD4043 /* LUTPass.h */,
+				5BC56A60E911F7488A58830A /* NoiseWarpPass.cpp */,
+				F9E69702DE151AD76690D1CF /* NoiseWarpPass.h */,
+				48E4AC9F455A87F0448C70B2 /* ofxPostProcessing.h */,
+				7462D018F6D6E407E598A021 /* PixelatePass.cpp */,
+				B2F3289AB405C5BB496FC247 /* PixelatePass.h */,
+				484F662699DFE8176E1B750F /* PostProcessing.cpp */,
+				DACACDF2F37260A0BFF826E2 /* PostProcessing.h */,
+				54F36382628E4D0FF07206D7 /* RenderPass.cpp */,
+				F5DB1AC24B8010FC3C556AAC /* RenderPass.h */,
+				5201F6A7A19258B7F1CA2E43 /* RGBShiftPass.cpp */,
+				0BC82FF9BACF54030E42E808 /* RGBShiftPass.h */,
+				74BDDD14F49833AD24862E87 /* RimHighlightingPass.cpp */,
+				E84ADD8443D82E35430385B7 /* RimHighlightingPass.h */,
+				C127DCF305861E6D5D6332E6 /* SSAOPass.cpp */,
+				6BBE5C9251660EA96B398017 /* SSAOPass.h */,
+				E547AB568F5E5027A880C47C /* ToonPass.cpp */,
+				14F8B4286F653202B881D865 /* ToonPass.h */,
+				2C2B73DCDAF417A486A343EF /* VerticalTiltShifPass.cpp */,
+				2BE782D7AEC00E59BE1F567F /* VerticalTiltShifPass.h */,
+				EF8D27B3DEDC121DE85F5B7B /* ZoomBlurPass.cpp */,
+				BAA4E229C246D7B615917505 /* ZoomBlurPass.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				BD52EC6DCE402D90869A80A1 /* ofxPostProcessing */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		BD52EC6DCE402D90869A80A1 /* ofxPostProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				AFF78A8EB1A778F89BAD1809 /* src */,
+			);
+			name = ofxPostProcessing;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				E4B69B5B0A3A1756003C02F2 /* FractSubIcosaDebug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				5AFAC3311EC77297000AFCC9 /* FractSubIcosa.hpp */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* FractSubIcosa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "FractSubIcosa" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = FractSubIcosa;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* FractSubIcosaDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "FractSubIcosa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* FractSubIcosa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n# Copy GLUT framework (must remove for AppStore submissions)\nrsync -aved ../../../libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				79308B05C4D0A9B9E404FFED /* BleachBypassPass.cpp in Sources */,
+				3A499904889C490DCF533C6E /* BloomPass.cpp in Sources */,
+				DFB75F1EBE744A456AC999F4 /* ContrastPass.cpp in Sources */,
+				778DCA6792476E5B9F57F175 /* ConvolutionPass.cpp in Sources */,
+				B58A80B21A55E254F48E6E13 /* DofAltPass.cpp in Sources */,
+				114C00B13F753E59BB0984BB /* DofPass.cpp in Sources */,
+				AE65C02FEC934514466A8D67 /* EdgePass.cpp in Sources */,
+				33DB731E964056D7E35604A7 /* FakeSSSPass.cpp in Sources */,
+				04C13EEA813A786CC1D8137A /* FxaaPass.cpp in Sources */,
+				6A505EAE8088949A9180FFE7 /* GodRaysPass.cpp in Sources */,
+				28AFD6FA9B9C885AFD9FF1C7 /* HorizontalTiltShifPass.cpp in Sources */,
+				B59194C82B8D802DA33EC465 /* HsbShiftPass.cpp in Sources */,
+				884CB4D049E35C51E949A565 /* KaleidoscopePass.cpp in Sources */,
+				7AB51F1099DC01486D18FAF6 /* LimbDarkeningPass.cpp in Sources */,
+				B1747F12881D899DCA2647FC /* LUTPass.cpp in Sources */,
+				8072A86E35F7000F7CDEEF42 /* NoiseWarpPass.cpp in Sources */,
+				B951AAE35209993B4E399E77 /* PixelatePass.cpp in Sources */,
+				BE5ED1FDB18D5092CF3AACA0 /* PostProcessing.cpp in Sources */,
+				1E615236D6D182DED6C8A8B2 /* RenderPass.cpp in Sources */,
+				E4797F1786BE22985F7EE55F /* RGBShiftPass.cpp in Sources */,
+				4A2B684DF41F7779B2947319 /* RimHighlightingPass.cpp in Sources */,
+				4355FD81C3F9DDE40B10CE94 /* SSAOPass.cpp in Sources */,
+				813E52BD790CE4AAF527DCD4 /* ToonPass.cpp in Sources */,
+				898CB0955CB42FEB5D750A5C /* VerticalTiltShifPass.cpp in Sources */,
+				D752EB8BA905C25F5E7F2B30 /* ZoomBlurPass.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxPostProcessing/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxPostProcessing/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxPostProcessing/src,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxPostProcessing/src,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "FractSubIcosa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "FractSubIcosa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
