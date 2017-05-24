@@ -1,0 +1,31 @@
+<group>
+	<Point_light_1>
+		<Position>0.416504, 791.753, 0.416504</Position>
+		<Diffuse_Color>0.4, 0.4, 0.4, 1</Diffuse_Color>
+		<Specular_Color>1, 1, 1, 1</Specular_Color>
+		<Radius>817.347</Radius>
+		<Intensity>0.529082</Intensity>
+	</Point_light_1>
+	<Point_light_2>
+		<Position>104.54, 583.507, -51.6451</Position>
+		<Diffuse_Color>0.4, 0.4, 0.4, 1</Diffuse_Color>
+		<Specular_Color>1, 1, 1, 1</Specular_Color>
+		<Radius>526.531</Radius>
+		<Intensity>0.469898</Intensity>
+	</Point_light_2>
+	<Ambient_Occlusion>
+		<Occlusion_Radius>5.70663</Occlusion_Radius>
+		<Darkness>0.775</Darkness>
+	</Ambient_Occlusion>
+	<Shadow_Light>
+		<Ambient>0.147959</Ambient>
+		<Diffuse>0.453571</Diffuse>
+		<Shadow_Darkness>0.4</Shadow_Darkness>
+		<Lighting_Blend>0.4</Lighting_Blend>
+	</Shadow_Light>
+	<Defocus_Blur>
+		<Max_Blur>0.5</Max_Blur>
+		<Aperture>0.117347</Aperture>
+		<Focus_Distance>0.0714286</Focus_Distance>
+	</Defocus_Blur>
+</group>
