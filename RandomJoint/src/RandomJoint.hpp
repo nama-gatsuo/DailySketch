@@ -23,10 +23,10 @@ private:
         const int jointNum = 40;
         const int partsNum = 6;
         
-        float radius = 512.0;
+        float radius = 768.0;
         float heightBallance = 0.8;
         
-        float threshold = 150.0;
+        float threshold = 180.0;
         
         for (int i = 0; i < jointNum; i++) {
             
@@ -123,8 +123,5 @@ private:
         mesh.addColor(ofFloatColor(0.4, 0.7, 0.9));
     }
     
-    
     ofVboMesh mesh;
-    
-    
 };

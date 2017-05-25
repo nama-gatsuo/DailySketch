@@ -21,6 +21,8 @@ void ofApp::draw(){
     lightingPass->drawLights();
     deferred.end();
     
+//    shadowLightPass->debugDraw();
+    
     if (isShow) panel.draw();
 }
 
@@ -34,7 +36,7 @@ void ofApp::setupDeferred(){
     
     shadowLightPass = deferred.createPass<ShadowLightPass>().get();
     shadowLightPass->lookAt(ofVec3f(0.0));
-    shadowLightPass->setCam(60, 0.1, 2000);
+    shadowLightPass->setCam(60, 0.1, 1300);
     
     lightingPass = deferred.createPass<PointLightPass>().get();
     ofxDeferredShading::PointLight dlight;
