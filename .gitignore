@@ -3,6 +3,8 @@
 */.DS_Store
 */bin/*.app
 
+*.mp3
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
