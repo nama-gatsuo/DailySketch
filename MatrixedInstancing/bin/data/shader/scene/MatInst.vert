@@ -71,7 +71,21 @@ void main(){
     rotate(p, vec3(0,0,1), rot2.z * t2);
     scale(p, scale2.xxx * (0.5 + t2));
 
-    gl_Position = modelViewProjectionMatrix * vec4(p, 1.0);
+    float r = 1.4;
+
+    vec4 pos = modelViewProjectionMatrix * vec4(p, 1.0);
+    // if (pos.z > 0.0) {
+    //     float d = length(pos.xyz);
+    //     if (d < 0.001) d = 0.001;
+    //     pos /= d;
+    //     pos.z += 1.;
+    //     pos.x *= r / pos.z;
+    //     pos.y *= r / pos.z;
+    //     pos.z = (d - nearClip) / (farClip - nearClip);
+    //     pos.w = 1.0;
+    // }
+
+    gl_Position = pos;
 
     vec4 viewPos = modelViewMatrix * vec4(p, 1.0);
     vDepth = - viewPos.z / (farClip - nearClip);

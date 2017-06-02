@@ -54,10 +54,10 @@ public:
 private:
     void createMesh(){
         
-        ofFloatColor c1(0.9, 1.1, 1.2);
-//        c1.setHsb(1.0, 1.0, 1.0);
+        ofFloatColor c1;
+        c1.setHsb(1.0, 1.0, 1.0);
         ofFloatColor c2;
-        c2.setHsb(0.5, 0.5, 1.0);
+        c2.setHsb(0.5, 0.6, 0.5);
         
         float w = 10.0;
         float h = 10.0;
@@ -133,10 +133,10 @@ private:
         
         //
         m.makeIdentityMatrix();
-        m.glRotate(45, 1,0,0);
-        m.glRotate(45, 0,1,0);
-        m.glRotate(45, 0,0,1);
-        m.glScale(w * 0.8, h * 0.8, d * 0.8);
+//        m.glRotate(45, 1,0,0);
+//        m.glRotate(45, 0,1,0);
+//        m.glRotate(45, 0,0,1);
+        m.glScale(w * 0.9, h * 0.9, d * 0.9);
         createBox(m, c2);
         
         
