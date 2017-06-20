@@ -1,16 +1,16 @@
 <group>
 	<Point_light_1>
-		<Position>104.54, 198.251, 552.27</Position>
-		<Diffuse_Color>0.4, 0.4, 0.4, 1</Diffuse_Color>
-		<Specular_Color>0.656393, 0.661599, 0.692836, 1</Specular_Color>
-		<Radius>500</Radius>
-		<Intensity>1.04694</Intensity>
+		<Position>0.416504, 198.251, 552.27</Position>
+		<Diffuse_Color>0.140983, 0.151395, 0.146189, 1</Diffuse_Color>
+		<Specular_Color>0.312786, 0.354436, 0.338817, 1</Specular_Color>
+		<Radius>2000</Radius>
+		<Intensity>0.17398</Intensity>
 	</Point_light_1>
 	<Point_light_2>
 		<Position>-270.304, -780.508, -187.005</Position>
 		<Diffuse_Color>0.4, 0.4, 0.4, 1</Diffuse_Color>
 		<Specular_Color>0.770929, 0.781341, 0.734486, 1</Specular_Color>
-		<Radius>662.245</Radius>
+		<Radius>100</Radius>
 		<Intensity>0.262755</Intensity>
 	</Point_light_2>
 	<Ambient_Occlusion>

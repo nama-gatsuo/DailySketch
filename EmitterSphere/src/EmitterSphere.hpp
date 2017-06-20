@@ -16,7 +16,7 @@ public:
         pos = ofVec3f(0);
         vel = v * s;
         speed = s;
-        thres = 300.0;
+        thres = 280.0;
         
         lines.setMode(OF_PRIMITIVE_POINTS);
     };
@@ -52,9 +52,9 @@ public:
         lShader.setGeometryOutputCount(24);
         
         lShader.load("shader/scene/lines.vert", "shader/scene/lines.frag", "shader/scene/lines.geom");
-        sphere = ofMesh::sphere(300, 10);
+        sphere = ofMesh::icosphere(300);
         for (int i = 0; i < sphere.getNumVertices(); i++) {
-            sphere.addColor(ofFloatColor(0.8, 1.5, 0.8));
+            sphere.addColor(ofFloatColor(0.));
         }
         p = ofMesh::sphere(10, 3);
         for (int i = 0; i < p.getNumVertices(); i++) {
@@ -93,7 +93,7 @@ public:
             ofPopMatrix();
         }
         
-        sphere.draw(OF_MESH_WIREFRAME);
+        sphere.draw();
         gbShader.end();
         
         for (auto part : ps) {
@@ -116,7 +116,7 @@ public:
         v.z = sin(lat);
         v.normalize();
         
-        ps.push_back(Particle(v, ofRandom(1.0, 2.0)));
+        ps.push_back(Particle(v, ofRandom(1.5, 3.0)));
     };
 private:
     ofShader lShader;
