@@ -14,6 +14,7 @@ public:
         for (int i = 0; i < mesh.getNumIndices(); i++){
             mesh.addColor(col);
         }
+        
     };
     void update(float speed){
 //        an = (_an - an) * speed + an;
