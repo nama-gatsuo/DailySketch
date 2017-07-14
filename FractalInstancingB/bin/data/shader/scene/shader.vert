@@ -56,7 +56,7 @@ void main(){
     scale(p, boxSize);
 
     for (int i = 0; i < 7; i++) {
-        float ind = floor(float(gl_InstanceID) / pow(division, float(i)));
+        float ind = floor(float(gl_InstanceID) / pow(division, float(6-i)));
 
         rotate(p, vec3(0., 1., 0.), PI/division * 2. * ind);
         scale(p, vec3(dscale[i]));

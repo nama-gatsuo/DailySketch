@@ -55,8 +55,6 @@ void Tree::draw(ofCamera cam, bool isShadow){
         sca.clear();
         tra.clear();
         
-        shader.begin();
-        
         for (int j = 0; j < depth; j++) {
             if (i > j) {
                 sca.push_back(scale[j].getValue());
@@ -65,14 +63,14 @@ void Tree::draw(ofCamera cam, bool isShadow){
                 sca.push_back(1.);
                 tra.push_back(0.);
             }
-            
-            shader.setUniform3f("boxSize", boxSize);
-            shader.setUniform1i("division", division);
-            shader.setUniform1fv("dscale", sca.data(), depth);
-            shader.setUniform1fv("translate", tra.data(), depth);
-            
-            shader.setUniform1i("index", i);
         }
+        
+        shader.begin();
+        shader.setUniform3f("boxSize", boxSize);
+        shader.setUniform1i("division", division);
+        shader.setUniform1fv("dscale", sca.data(), depth);
+        shader.setUniform1fv("translate", tra.data(), depth);
+        shader.setUniform1i("index", i);
         mesh.drawInstanced(OF_MESH_FILL, num[i]);
         shader.end();
     }
