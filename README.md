@@ -1,3 +1,4 @@
 # Daily Sketch
-Maily using openFrameworks.
-Since 2017
+Coding challenge as my routine (but not pure "daily") since 2017.
+Mainly using openFrameworks.
+
