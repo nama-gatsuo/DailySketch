@@ -2,7 +2,7 @@
 date: 20170814
 
 ### Capture
-![1](./bin/data/screenshot.jpg)
+![1](./bin/screenshot.jpg)
 
 ### Data Source
 * [Topographic map](https://en.wikipedia.org/wiki/File:BlankMap-World6-Equirectangular.svg)
