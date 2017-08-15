@@ -88,7 +88,8 @@ void ofApp::setupDeferred(){
 
 void ofApp::updateDeferredParam(){
     
-    lightingPass->getLightRef(0).position = pl1_pos.get();
+    lightingPass->getLightRef(0).position = cam.getPosition();
+    
     lightingPass->getLightRef(0).diffuseColor = pl1_diff.get();
     lightingPass->getLightRef(0).specularColor = pl1_spe.get();
     lightingPass->getLightRef(0).radius = pl1_rad.get();

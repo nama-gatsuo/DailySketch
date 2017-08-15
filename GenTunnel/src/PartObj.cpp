@@ -21,9 +21,9 @@ void PartObj::setup(PartMode mode) {
             float w = 8.;
             
             ofFloatColor c(0.5);
-            if (ofRandom(1.) < 0.5) {
+//            if (ofRandom(1.) < 0.5) {
                 c.set(4.0, 0.6, 4.0);
-            }
+//            }
             for (int i = 0; i < num; i++) {
                 ofMatrix4x4 m;
                 m.glRotate(360. / num * i, 0, 0, 1.);
@@ -36,8 +36,8 @@ void PartObj::setup(PartMode mode) {
             break;
         }
         case SPHERES: {
-
-            int num = 8;
+            
+            int num = 12;
             float radius = 100.;
             ofFloatColor c;
             c.set(4.0, 0.6, 4.0);
@@ -45,7 +45,7 @@ void PartObj::setup(PartMode mode) {
             for (int i = 0; i < num; i++) {
                 ofMatrix4x4 m;
                 m.glRotate(360. / num * i, 0, 0, 1.);
-                m.glTranslate(0, radius, 0);
+                m.glTranslate(0, radius, i*80.);
                 createSphere(m, c);
             }
             aSpeed = 0.;
@@ -59,41 +59,42 @@ void PartObj::setup(PartMode mode) {
 
 void PartObj::createWalls() {
     
-    int aNum = floor(ofRandom(3., 8.));
+    int aNum = floor(ofRandom(6., 12.));
     float radius = 300. * ofRandom(0.6, 1.0);
-    float totalAngle = 270. * ofRandom(0.5, 1.0);
+    float totalAngle = 360.* ofRandom(0.6, 1.0);
     float totalDepth = 800.* ofRandom(0.8, 1.0);
     float w = 8.;
     float x = radius * sin(totalAngle / aNum * 0.5 / 180. * PI) * 2.;
-    x *= ofRandom(0.5, 1.1);
+    x *= ofRandom(0.7, 1.1);
     
-    ofFloatColor c(1.0);
+    ofFloatColor c(.5);
 //    c.setHsb(0.5, 0.5, 0.5);
-    
+    ofFloatColor c2(.1, 3., 4.0);
     for (int i = 0; i < aNum + 1; i++) {
         ofMatrix4x4 mi;
         mi.glRotate(totalAngle / aNum * i, 0, 0, 1.);
-        mi.glTranslate(0, radius, 0);
+        mi.glTranslate(0, radius, 100 * i);
         createBox(mi, c, x, w, totalDepth);
-        
+        createBox(mi, c2, x, w*2., w);
+        createBox(mi, c, w, w*2., totalDepth);
     }
     
 }
 
 void PartObj::createLattice(){
-    int aNum = floor(ofRandom(3., 12.));
-    int dNum = floor(ofRandom(3., 8.));
+    int aNum = floor(ofRandom(3., 10.));
+    int dNum = floor(ofRandom(3., 6.));
     float radius = 200. * ofRandom(0.5, 1.0);
     float totalDepth = 600.* ofRandom(0.8, 1.0);
-    float totalAngle = 270. * ofRandom(0.5, 1.0);
+    float totalAngle = 180. * ofRandom(0.5, 1.0);
     
     float w = 8.;
     float x = radius * sin(totalAngle / aNum * 0.5 / 180. * PI) * 2.;
     
     ofFloatColor c(0.5);
-    if (ofRandom(1.) < 0.2) {
-        c.set(4.0, 0.6, 4.0);
-    }
+//    if (ofRandom(1.) < 0.2) {
+//        c.set(4.0, 0.6, 4.0);
+//    }
     
     for (int i = 0; i < aNum + 1; i++) {
         ofMatrix4x4 mi;
