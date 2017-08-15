@@ -1,0 +1,11 @@
+## Mesh Earth
+date: 20170814
+
+### Capture
+![1](./bin/data/screenshot.jpg)
+
+### Data Source
+* [Topographic map](https://en.wikipedia.org/wiki/File:BlankMap-World6-Equirectangular.svg)
+    * fetch command is [here](https://code.earthengine.google.com/d905bfffd39fa362ad6d23f315214df2).
+* [Coast line(Batymetry)](https://visibleearth.nasa.gov/view.php?id=73963)
+* [Color image](https://visibleearth.nasa.gov/view.php?id=73909)
