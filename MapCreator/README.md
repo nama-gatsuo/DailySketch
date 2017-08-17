@@ -9,4 +9,4 @@ date: 20170814
 
 ### Data Source
 * [BlankMap-World6-Equirectangular.svg](https://en.wikipedia.org/wiki/File:BlankMap-World6-Equirectangular.svg)
-* [GDP per capita (current US$)](http://data.worldbank.org/indicator/NY.GDP.PCAP.CD?view=map)
+* [World Bank Open Data](http://data.worldbank.org/)
