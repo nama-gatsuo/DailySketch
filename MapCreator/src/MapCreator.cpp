@@ -37,8 +37,8 @@ void MapCreator::setup(){
     
 }
 
-void MapCreator::setLayer(){
-    if (json.open("json/gdp_per_capita.json")) {
+void MapCreator::setLayerA(){
+    if (json.open("json/gdp-per-capita_2015.json")) {
         
         fbo.begin();
         ofClear(0);
@@ -78,6 +78,153 @@ void MapCreator::setLayer(){
     }
     
 }
+
+void MapCreator::setLayerB(int year){
+    
+    if (json.open("json/population-growth-rate.json")) {
+        
+        string ys = ofToString(year);
+        
+        fbo.begin();
+        ofClear(0);
+        
+        ofPushMatrix();
+        ofTranslate(116, 0);
+        ofScale(0.9, 1.0);
+        for (int i = 0; i < countries.size(); i++) {
+            
+            ofFloatColor c(0.);
+            
+            // checking
+            for (int j = 0; j < json["iso"].size(); j++) {
+                
+                if (json["iso"][j].asString() == countries[i].id) {
+                    float value = json[ys][j].asFloat();
+                    
+                    if (value > 0.) {
+                        c.set(ofFloatColor(0., 0., 0.3) * value);
+                    } else {
+                        c.set(ofFloatColor(0.5, 0., 0.) * abs(value));
+                        
+                    }
+                    
+                    break;
+                }
+            }
+            
+            for (int j = 0; j < countries[i].pathes.size(); j++) {
+                countries[i].pathes[j].setColor(c);
+                countries[i].pathes[j].draw();
+            }
+        }
+        
+        ofPopMatrix();
+        
+        fbo.end();
+        
+    } else {
+        cout << "load was failed" << endl;
+    }
+    
+}
+
+void MapCreator::setLayerC(int year){
+    
+    if (json.open("json/death-rate.json")) {
+        
+        string ys = ofToString(year);
+        
+        fbo.begin();
+        ofClear(0);
+        
+        ofPushMatrix();
+        ofTranslate(116, 0);
+        ofScale(0.9, 1.0);
+        for (int i = 0; i < countries.size(); i++) {
+            
+            ofFloatColor c(0.);
+            
+            // checking
+            for (int j = 0; j < json["iso"].size(); j++) {
+                
+                if (json["iso"][j].asString() == countries[i].id) {
+                    float value = json[ys][j].asFloat();
+                    
+                    c.set(ofFloatColor(0.05,0,0.) * value);
+                    
+                    break;
+                }
+            }
+            
+            for (int j = 0; j < countries[i].pathes.size(); j++) {
+                countries[i].pathes[j].setColor(c);
+                countries[i].pathes[j].draw();
+            }
+        }
+        
+        ofPopMatrix();
+        
+        fbo.end();
+        
+    } else {
+        cout << "load was failed" << endl;
+    }
+    
+}
+
+void MapCreator::setLayerD(int mode){
+    
+    if (json.open("json/suicide-rate.json")) {
+        string year;
+        
+        switch (mode) {
+            case 0: year = "2000"; break;
+            case 1: year = "2005"; break;
+            case 2: year = "2010"; break;
+            case 3: year = "2015"; break;
+            default: year = "2015"; break;
+        }
+        
+        fbo.begin();
+        ofClear(0);
+        
+        ofPushMatrix();
+        ofTranslate(116, 0);
+        ofScale(0.9, 1.0);
+        for (int i = 0; i < countries.size(); i++) {
+            
+            ofFloatColor c(0.);
+            
+            // checking
+            for (int j = 0; j < json["iso"].size(); j++) {
+                
+                if (json["iso"][j].asString() == countries[i].id) {
+                    float value = json[year][j].asFloat();
+                    
+                    c.set(ofFloatColor(0.3) * (value/10.));
+                    
+                    break;
+                }
+            }
+            
+            for (int j = 0; j < countries[i].pathes.size(); j++) {
+                countries[i].pathes[j].setColor(c);
+                countries[i].pathes[j].draw();
+            }
+        }
+        
+        ofPopMatrix();
+        
+        fbo.end();
+        
+        
+    } else {
+        cout << "load was failed" << endl;
+    }
+    
+}
+
+
 
 void MapCreator::draw(int x, int y){
     draw(x, y, fbo.getWidth(), fbo.getHeight());
