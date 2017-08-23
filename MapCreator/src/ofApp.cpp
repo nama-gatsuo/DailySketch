@@ -25,7 +25,7 @@ void ofApp::keyPressed(int key){
     if(key == ' '){
         ofImage img;
         img.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
-        img.save("screenshot.png"); 
+        img.save(modeName[mode] + ", " + ofToString(year) + ".png");
     } else if (key == 'a') {
         year = 2015;
         mc.setLayerA();
@@ -43,6 +43,10 @@ void ofApp::keyPressed(int key){
         ys = 0;
         mc.setLayerD(ys);
         mode = 3;
+    } else if (key == 'g') {
+        year = 0;
+        mc.setLayerE();
+        mode = 4;
     }
     else if (key == OF_KEY_UP) {
         if (mode == 1) {

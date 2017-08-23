@@ -224,7 +224,48 @@ void MapCreator::setLayerD(int mode){
     
 }
 
+void MapCreator::setLayerE(){
+    
+    if (json.open("json/unmarried-rate.json")) {
+        
+        fbo.begin();
+        ofClear(0);
+        
+        ofPushMatrix();
+        ofTranslate(116, 0);
+        ofScale(0.9, 1.0);
+        for (int i = 0; i < countries.size(); i++) {
+            
+            ofFloatColor c(0.);
+            
+            // checking
+            for (int j = 0; j < json["iso"].size(); j++) {
+                
+                if (json["iso"][j].asString() == countries[i].id) {
+                    float value = json["value"][j].asInt();
+                    
+                    if (value) c.set(value / 50.);
+                    else c.set(0.);
+                    
+                    break;
+                }
+            }
+            
+            for (int j = 0; j < countries[i].pathes.size(); j++) {
+                countries[i].pathes[j].setColor(c);
+                countries[i].pathes[j].draw();
+            }
+        }
+        
+        ofPopMatrix();
+        
+        fbo.end();
+        
+    } else {
+        cout << "load was failed" << endl;
+    }
 
+}
 
 void MapCreator::draw(int x, int y){
     draw(x, y, fbo.getWidth(), fbo.getHeight());

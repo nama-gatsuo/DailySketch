@@ -16,6 +16,7 @@ public:
     void setLayerB(int year);
     void setLayerC(int year);
     void setLayerD(int mode);
+    void setLayerE();
     void draw(int x=0, int y=0);
     void draw(int x, int y, int w, int h);
     
