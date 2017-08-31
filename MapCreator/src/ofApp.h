@@ -21,4 +21,6 @@ public:
     };
     int year;
     int ys = 0;
+    
+    bool isShowCaption = true;
 };

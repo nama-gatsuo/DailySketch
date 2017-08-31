@@ -16,7 +16,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     mc.draw(0,0, ofGetWidth(), ofGetHeight());
-    font.drawString(modeName[mode] + ", " + ofToString(year), 20,ofGetHeight() - 40);
+    if (isShowCaption) font.drawString(modeName[mode] + ", " + ofToString(year), 20,ofGetHeight() - 40);
 }
 
 //--------------------------------------------------------------
@@ -26,6 +26,8 @@ void ofApp::keyPressed(int key){
         ofImage img;
         img.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
         img.save(modeName[mode] + ", " + ofToString(year) + ".png");
+    } else if (key == 'c') {
+        isShowCaption = !isShowCaption;
     } else if (key == 'a') {
         year = 2015;
         mc.setLayerA();
