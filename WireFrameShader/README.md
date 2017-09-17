@@ -1,5 +1,5 @@
 ## Wireframe Shader
-data: 20170915
+date: 20170915
 
 ### Addon
 * ofxDeferredShading
@@ -13,4 +13,4 @@ data: 20170915
 ![3](./bin/screenshot3.jpg)
 
 ### Reference
-* [Easy wireframe display with barycentric coordinates](http://codeflow.org/entries/2012/aug/02/easy-wireframe-display-with-barycentric-coordinates/#how-it-works)
+* [Easy wireframe display with barycentric coordinates](http://codeflow.org/entries/2012/aug/02/easy-wireframe-display-with-barycentric-coordinates/)
