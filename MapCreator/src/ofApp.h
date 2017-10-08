@@ -16,8 +16,8 @@ public:
     ofxTrueTypeFontUC font;
     
     int mode = 0;
-    string modeName[5] = {
-        "GDP Per Capita", "Population Growth Rate", "Death Rate", "Suicide Rate", "Unmarried Rate"
+    string modeName[7] = {
+        "GDP Per Capita", "Population Growth Rate", "Death Rate", "Suicide Rate", "Unmarried Rate", "HIV/AIDS", "Malignant Neoplasms"
     };
     int year;
     int ys = 0;

@@ -49,6 +49,14 @@ void ofApp::keyPressed(int key){
         year = 0;
         mc.setLayerE();
         mode = 4;
+    } else if (key == 'h') {
+        year = 0;
+        mc.setLayerF();
+        mode = 5;
+    } else if (key == 'j') {
+        year = 0;
+        mc.setLayerG();
+        mode = 6;
     }
     else if (key == OF_KEY_UP) {
         if (mode == 1) {

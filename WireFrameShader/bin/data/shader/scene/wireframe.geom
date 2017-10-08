@@ -37,25 +37,5 @@ void main(void){
     EmitVertex();
 
     EndPrimitive();
-
-    // for (int i = 0; i < gl_in.length(); i++) {
-    //
-    //     gPosition = vPosition[i];
-    //     gDepth = vDepth[i];
-    //     gNormal = vNormal;
-    //
-    //     if (mod(i, 3.) == 0.) {
-    //         gBC = vec3(1,0,0);
-    //         EmitVertex();
-    //     } else if (mod(i, 3.) == 1.) {
-    //         gBC = vec3(0,1,0);
-    //         EmitVertex();
-    //     } else if (mod(i, 3.) == 2.) {
-    //         gBC = vec3(0,0,1);
-    //         EmitVertex();
-    //         EndPrimitive();
-    //     }
-    //
-    // }
-
+    
 }
