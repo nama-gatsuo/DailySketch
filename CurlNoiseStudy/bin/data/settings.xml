@@ -1,0 +1,9 @@
+<group>
+	<radius>100</radius>
+	<turbulence>0.435</turbulence>
+	<noise_scale>24.076</noise_scale>
+	<noise_strength>72.028</noise_strength>
+	<point_size>1</point_size>
+	<1st_color>1, 0.515306, 0.744898, 0.341837</1st_color>
+	<2nd_color>0.352041, 0.69898, 1, 0.0561224</2nd_color>
+</group>
