@@ -18,32 +18,15 @@ public:
             
         }
         
-        
     };
     void itr(ofVec3f * v, int lev){
         
-        ofVec3f n = (v[2] - v[0]).getCrossed(v[1] - v[0]).getNormalized();
-        
         if (lev > MAX_LEV) {
-            mesh.addVertex(v[0]);
-            mesh.addVertex(v[1]);
-            mesh.addVertex(v[2]);
-            
-            ofFloatColor c;
-            if (ofRandom(1.) < 0.0) c = ofFloatColor(0.5, 1.3, 2.);
-            else c = ofFloatColor(0.1);
-            
-            mesh.addColor(c);
-            mesh.addColor(c);
-            mesh.addColor(c);
-            
-            mesh.addNormal(n);
-            mesh.addNormal(n);
-            mesh.addNormal(n);
-            
+            createTri(v);
             return;
         }
         
+        ofVec3f n = (v[2] - v[0]).getCrossed(v[1] - v[0]).getNormalized();
         ofVec3f c = (v[0] + v[1] + v[2]) / 3.;
         lev++;
         
@@ -51,7 +34,7 @@ public:
         
             ofVec3f nv[3];
             
-            nv[0] = c + n * SIZE * H_FACTOR * pow(0.8   , lev);
+            nv[0] = c + n * SIZE * H_FACTOR * pow(0.53, lev);
             nv[1] = v[i];
             nv[2] = i==2 ? v[0] : v[i+1];
             
@@ -67,7 +50,12 @@ public:
                 
                 ofVec3f n = (nnv[2] - nnv[0]).getCrossed(nnv[1] - nnv[0]).getNormalized();
                 
-                itr(nnv, lev);
+                if (j == 1) {
+                    if (lev == 1) continue;
+                    createTri(nnv);
+                } else {
+                    itr(nnv, lev);
+                }
                 
             }
             
@@ -75,16 +63,34 @@ public:
         
     };
     
+    void createTri(ofVec3f * v){
+        mesh.addVertex(v[0]);
+        mesh.addVertex(v[1]);
+        mesh.addVertex(v[2]);
+        
+        ofFloatColor c;
+        if (ofRandom(1.) < 0.01) c = ofFloatColor(0.5, 1.3, 2.);
+        else c = ofFloatColor(0.1);
+        
+        ofVec3f n = (v[2] - v[0]).getCrossed(v[1] - v[0]).getNormalized();
+        
+        for (int i = 0; i < 3; i++) {
+            mesh.addColor(c);
+            mesh.addNormal(n);
+        }
+
+    }
+    
     void draw(){
         
-        mesh.draw();
+        mesh.draw(OF_MESH_WIREFRAME);
         
     };
 private:
     const int MAX_LEV = 4;
     const float SIZE = 800;
-    const float H_FACTOR = 0.3;
-    const float F_FACTOR = 0.3;
+    const float H_FACTOR = -0.54;
+    const float F_FACTOR = 0.33;
     
     ofVboMesh mesh;
     

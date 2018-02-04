@@ -81,9 +81,8 @@ void itr(Agent a, int lev){
   if (lev > depth) return;
   
   float angle = a.getAngle() - PI / 2.;
-  float cosine = a.getCos();
   
-  // straigt
+  // straight
   if (random(1.) < 0.6) {
     Agent na = new Agent(a.pos.copy(), a.dir.copy());
     na.straight();
@@ -91,7 +90,7 @@ void itr(Agent a, int lev){
     itr(na, lev);
   }
   
-  // right
+  // left
   if (angle < 2. * theta && random(1.) < 0.3) {
     Agent na = new Agent(a.pos.copy(), a.dir.copy());
     na.right();
