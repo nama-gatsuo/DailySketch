@@ -24,6 +24,7 @@ void ofApp::setup(){
 void ofApp::update(){
     
     emitter.update();
+    emitter.setPosition(ofVec3f(500 * sin(ofGetElapsedTimef()),500 * cos(PI + ofGetElapsedTimef()),500 * sin(PI + ofGetElapsedTimef())));
     
     if (isShowPanel) {
         emitter.setRadius(radius.get());
@@ -35,6 +36,7 @@ void ofApp::update(){
         emitter.setTurbulence(turbulence.get());
         emitter.setPointSize(pointSize.get());
         emitter.createStartPos();
+        
     }
     
 }
@@ -52,7 +54,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    if (key == 'h') isShowPanel = !isShowPanel;
 }
 
 

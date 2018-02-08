@@ -10,7 +10,7 @@ void ParticleEmitter::setup(){
     updateData.load("shader/scene/passThru.vert", "shader/scene/updateData.frag");
     createData.load("shader/scene/passThru.vert", "shader/scene/createData.frag");
     
-    const int wNum = 512, hNum = 512;
+    const int wNum = 1024, hNum = 1024;
     
     pingPong.allocate(wNum, hNum);
     
@@ -51,6 +51,8 @@ void ParticleEmitter::update(){
     ofClear(0);
     
     updateData.begin();
+    updateData.setUniform3f("pos", pos);
+    updateData.setUniform3f("prevPos", prevPos);
     updateData.setUniformTexture("startPosAndAge", startData.getTexture(0), 1);
     updateData.setUniformTexture("startVel", startData.getTexture(1), 2);
     updateData.setUniformTexture("currentPosAndAge", pingPong.src->getTexture(0), 3);
@@ -84,7 +86,7 @@ void ParticleEmitter::draw(){
 }
 
 void ParticleEmitter::setPosition(const ofVec3f& pos){
-    prevPos = ParticleEmitter::pos;
+    ParticleEmitter::prevPos = ParticleEmitter::pos;
     ParticleEmitter::pos = pos;
 }
 
@@ -95,8 +97,8 @@ void ParticleEmitter::createStartPos(){
     
     ofClear(0);
     createData.begin();
-    createData.setUniform3f("pos", pos);
-    createData.setUniform3f("prevPos", prevPos);
+//    createData.setUniform3f("pos", pos);
+//    createData.setUniform3f("prevPos", prevPos);
     createData.setUniform1f("radius", radius);
     createData.setUniform1f("maxLife", 200);
     startData.draw(0, 0);

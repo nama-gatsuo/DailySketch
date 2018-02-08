@@ -2,6 +2,7 @@
 
 #pragma include "./noise3d.frag"
 #pragma include "./curl-noise.frag"
+#pragma include "./random.frag"
 
 in vec2 vTexCoord;
 
@@ -15,6 +16,8 @@ uniform sampler2DRect startVel;
 uniform float turbulence;
 uniform float noiseStrength;
 uniform float noiseScale;
+uniform vec3 pos;
+uniform vec3 prevPos;
 
 layout (location = 0) out vec4 outputColor1;
 layout (location = 1) out vec4 outputColor2;
@@ -22,7 +25,7 @@ layout (location = 1) out vec4 outputColor2;
 void main(){
 
     vec4 posAndAge = texture(currentPosAndAge, vTexCoord);
-    vec3 pos = posAndAge.rgb;
+    vec3 p = posAndAge.rgb;
     vec3 vel = texture(currentVel, vTexCoord).rgb;
     float age = posAndAge.a;
 
@@ -30,14 +33,14 @@ void main(){
 
     if (age < 0.) {
         vec4 sPosAndAge = texture(startPosAndAge, vTexCoord);
-        pos = sPosAndAge.rgb;
-        vel = texture(startVel, vTexCoord).rgb;
+        p = sPosAndAge.rgb + mix(prevPos, pos, srand(vTexCoord));
+        vel = texture(startVel, vTexCoord).rgb + normalize(pos - prevPos) * srand(0.1 * vTexCoord) * 0.3;
         age = sPosAndAge.a;
     }
     vel *= (1.001 - turbulence);
-    vel += curlNoise(pos * noiseScale * 0.001) * noiseStrength * 0.01;
-    pos += vel;
+    vel += curlNoise(p * noiseScale * 0.001) * noiseStrength * 0.01;
+    p += vel;
 
-    outputColor1 = vec4(pos, age);
+    outputColor1 = vec4(p, age);
     outputColor2 = vec4(vel, 1.);
 }
