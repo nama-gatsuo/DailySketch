@@ -70,7 +70,7 @@ public:
                         } else {
                             __m.glScale(0.4, 0.35, 0.4);
                         }
-                        addBox(__m, c);
+                        room(__m);
                     }
                 }
             }
@@ -111,12 +111,64 @@ public:
         
     };
     
-    
+    void room(ofMatrix4x4 _m){
+        ofMatrix4x4 m = _m;
+        ofFloatColor c(0.1);
+        ofFloatColor lc(1.1);
+        
+        float coin = ofRandom(1.);
+        
+        if (coin < 0.4) {
+            addBox(m, c);
+            
+        } else if (coin < 0.7) {
+            m = _m;
+            m.glTranslate(0, 0.5, 0);
+            m.glScale(1., 0.1, 1.);
+            addBox(m, c);
+            
+            m = _m;
+            m.glTranslate(0, 0.3, 0);
+            m.glScale(1., 0.1, 1.);
+            addBox(m, c);
+            
+            m = _m;
+            m.glTranslate(0, 0.1, 0);
+            m.glScale(1., 0.1, 1.);
+            addBox(m, c);
+            
+            m = _m;
+            m.glTranslate(0, - 0.3, 0);
+            m.glScale(1., 0.4, 1.);
+            addBox(m, c);
+            
+            m = _m;
+            m.glScale(0.8, 0.8, 0.8);
+            addBox(m, lc);
+        } else {
+            float h = ofRandom(1.);
+            float w = ofRandom(0.45);
+            
+            for (int j = 0; j < 2; j++){
+                for (int k = 0; k < 2; k++){
+                    ofMatrix4x4 m = _m;
+                    m.glTranslate(0.25 + 0.5*j, 0., 0.25 + 0.5 * k);
+                    m.glScale(w, h, w);
+                    addBox(m, c);
+                }
+            }
+        }
+        
+    }
     
     void beam(ofMatrix4x4 _m){
         
         ofFloatColor c(1.);
         ofFloatColor bc(0.1);
+        
+        if (ofRandom(1.) < 0.5) {
+            _m.glRotate(90, 0,1,0);
+        }
         
         // vertical
         ofMatrix4x4 m = _m;
