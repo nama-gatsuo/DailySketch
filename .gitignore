@@ -14,9 +14,24 @@
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+*/xcuserdata/
 
 ## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+*.obj
+*.vs
+*.exe
+*.ilk
+*.lib
+*.pdb
+*.exp
+*.iobj
+*.ipdb
+*.dll
+*.sln
+*.vcxproj*
+*/icon.rc
+*/obj
