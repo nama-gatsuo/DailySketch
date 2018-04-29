@@ -16,7 +16,7 @@ void main() {
 
     n.z = 1.0 - d;
     float alpha = smoothstep(0.0, 1.0, n.z);
-    if (alpha < 0.) discard;
+    if (n.z < 0.001) discard;
     vec4 c = vec4(vColor.rgb * 1. / d, alpha) * vColor.a;
 
     outputColor0 = vec4(0.);
