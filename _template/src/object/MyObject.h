@@ -7,16 +7,16 @@ public:
 
 		panel.setName("MyObject");
 		addBox(glm::scale(glm::vec3(100.f)), ofFloatColor(1.f));
-		
+
 	}
 	void update(float dt) override {
-	
+
 	}
-	void draw() override {
+	void draw(float linearDepthScalar, bool isShadow) override {
 		mesh.draw();
 	}
 	void bang(int note, int velocity) override {
-	
+
 	}
 
 	void drawGui() override {

@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	
+
 	ofBackground(0);
 	ofSetFrameRate(60);
 
@@ -20,10 +20,16 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
+	//ofxDeferred::ShadowLightPass* tmpShadow = params.getShadow().get();
+	//float linearDepthScalar = tmpShadow->getLinearScalar();
+
 	params.getShadow()->beginShadowMap();
 	object->draw();
 	params.getPointLight()->drawLights();
 	params.getShadow()->endShadowMap();
+
+	//linearDepthScalar = 1.f / (cam.getFarClip() - cam.getNearClip());
 
 	deferred.begin(cam);
 	object->draw();

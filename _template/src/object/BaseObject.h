@@ -8,9 +8,9 @@ public:
 
 	virtual void setup() = 0;
 	virtual void update(float dt) = 0;
-	virtual void draw() = 0;
+	virtual void draw(float linearDepthScalar=0, bool isShadow=false) = 0;
 	virtual void bang(int note, int velocity) = 0;
-	
+
 	virtual void drawGui() = 0;
 
 protected:
